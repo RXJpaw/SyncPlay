@@ -1,0 +1,30 @@
+{
+    "directories": {
+        "output": "dist_electron"
+    },
+    "files": [
+        {
+            "from": "dist_vue",
+            "to": "",
+            "filter": ["!**/*.ts"]
+        },
+        {
+            "from": "electron",
+            "to": "electron",
+            "filter": ["!**/*.ts"]
+        },
+        "package.json"
+    ],
+    "productName": "SyncPlay",
+    "appId": "pw.rxj.public.syncplay",
+    "win": {
+        "icon": "public/favicon.ico",
+        "signAndEditExecutable": true,
+        "target": ["dir", "squirrel"],
+        "asar": true
+    },
+    "squirrelWindows": {
+        "iconUrl": "https://raw.githubusercontent.com/RXJpaw/SyncPlay/master/public/favicon.ico",
+        "artifactName": "SyncPlay Installer.exe"
+    }
+}
