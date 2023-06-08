@@ -78,6 +78,18 @@ export const SyncPlayInstance = () => {
 
                     break
                 }
+                case 'Ping': {
+                    const pingId = payload.data
+
+                    websocket.send(
+                        JSON.stringify({
+                            event: 'Pong',
+                            data: pingId
+                        })
+                    )
+
+                    break
+                }
             }
         }
 
